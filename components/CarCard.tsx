@@ -3,6 +3,7 @@
 import { CarProps } from '@/types'
 import { calculateCarRent } from '@/utils';
 import React from 'react'
+import Image from 'next/image';
 
 interface CarCardProps {
     car: CarProps;
@@ -29,6 +30,9 @@ const CarCard = ({ car }: CarCardProps) => {
                     /day
                 </span>
             </p>
+            <div className='relative w-full h-40 m-3 object-contain'>
+                <Image src="/hero.png" alt="car model" fill priority className='object-contain' />
+            </div>
         </div>
     )
 }
